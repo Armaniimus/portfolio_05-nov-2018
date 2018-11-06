@@ -1,0 +1,62 @@
+.menu-item {
+    float: left;
+    background: linear-gradient($darkgreen -40%, $lightgreen, $darkgreen 140%);
+    color: azure;
+    border: solid black 1px;
+    text-shadow: 1px 1px 0px $darkgreen, 2px 2px 1px $darkgreen;
+}
+
+.menu-item:hover {
+    background: linear-gradient($darkgreen -10%, $darkerlightgreen, $darkgreen 110%);
+}
+
+//select where parent is menuItem
+.menu-item > a {
+    padding: 15px;
+    display: block;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu {
+    clear: both;
+}
+
+.submenu > li {
+    display: relative;
+    clear: both !important;
+}
+
+.menu-item-has-children {
+    position: relative;
+}
+
+.menu-item-has-children > ul {
+    display: none;
+}
+
+//load icon
+.menu-item-has-children:hover > ul {
+   display: block;
+   border: 1px solid black;
+}
+
+
+// under Development
+@media only screen and (max-width: 599px) {
+    .menu-item,
+    .header-main-ul {
+        clear:both;
+        min-width: 140px
+    }
+
+    .dropdown-content {
+        margin-left: 140px;
+        top: 0px
+    }
+
+    .mobile_display_none {
+        display: none;
+    }
+}

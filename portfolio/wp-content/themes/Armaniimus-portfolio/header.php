@@ -27,13 +27,22 @@
 
         <!-- main nav -->
         <nav class="header-main">
-            <ul class="float-l header-main-ul mobile_display_none">
+            <?php
+            $defaults = array (
+                'container' => false,
+                'theme_location' => 'primary-menu',
+                'menu_class' => 'float-l primary-menu header-main-ul mobile_display_none'
+            );
+
+            wp_nav_menu($defaults);
+            ?>
+            <!-- <ul class="float-l header-main-ul mobile_display_none">
                 <li class="float-l header-li">
-                    <a href="<?php bloginfo('url'); ?>" class="float-l">Home <i class="fas fa-home"></i></a>
+                    <a href="<?php bloginfo('url'); ?>" class="float-l">Home<i class="fas fa-home"></i></a>
                 </li>
 
                 <ul class="float-l dropdown-ul">
-                    <li class="dropdown-title">Cv en etc. <i class="fas fa-caret-down"></i></li>
+                    <li class="dropdown-title">Cv en etc.<i class="fas fa-caret-down"></i></li>
                     <ul class="dropdown-content">
                         <li><a href="cv" class="float-l">CV</a></li>
                         <li><a href="overmij" class="float-l">Over mij</a></li>
@@ -42,7 +51,7 @@
                 </ul>
 
                 <ul class="float-l dropdown-ul">
-                    <li class="dropdown-title">Projecten <i class="fas fa-caret-down"></i></li>
+                    <li class="dropdown-title">Projecten<i class="fas fa-caret-down"></i></li>
                     <ul class="dropdown-content">
                         <li><a href="projecten-metvid" class="float-l">Projecten met video</a></li>
                         <li><a href="projecten-zondervid" class="float-l">Projecten zonder video</a></li>
@@ -51,7 +60,7 @@
 
                 <li class="float-l header-li">
                     <a href="contact" class="float-l">Contact</i></a>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </div>

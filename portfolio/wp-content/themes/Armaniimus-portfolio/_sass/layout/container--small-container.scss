@@ -1,7 +1,7 @@
 .container {
     padding: 30px;
-    border: #bbb solid 1px;
-    background-color: #fff;
+    border: $contentContain_Border solid 1px;
+    background-color: $contentContain_BColor;
 }
 
 .small-container {

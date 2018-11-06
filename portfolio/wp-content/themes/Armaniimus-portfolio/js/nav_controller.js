@@ -1,4 +1,4 @@
-const dropdownUl = document.querySelectorAll(".dropdown-ul");
+const dropdownUl = document.querySelectorAll(".menu-item-has-children > a:after");
 let tentSecondPreventRemove = 0
 let tentTimeOut;
 
@@ -31,11 +31,11 @@ function ControlOffClick() {
 }
 
 function RemoveClass(itemNr) {
-    document.querySelectorAll(".dropdown-ul")[itemNr].classList.remove("clicked-dropdown");
+    document.querySelectorAll(".menu-item-has-children")[itemNr].classList.remove("clicked-dropdown");
 }
 
 function AddClass(itemNr) {
-    document.querySelectorAll(".dropdown-ul")[itemNr].classList.add("clicked-dropdown");
+    document.querySelectorAll(".menu-item-has-children")[itemNr].classList.add("clicked-dropdown");
 }
 
 // add focus and unfocus events to (.dropdown-ul)
