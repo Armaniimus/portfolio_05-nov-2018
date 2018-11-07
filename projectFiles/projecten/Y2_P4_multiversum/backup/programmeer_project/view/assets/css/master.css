@@ -1,0 +1,234 @@
+.home-text {
+    display:block;
+    margin-bottom: -25px;
+}
+
+.updateform-input,
+.updateform-label,
+.createform-input,
+.createform-label {
+    display: block;
+}
+
+.updateform-label,
+.createform-label {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.updateform-input:valid,
+.createform-input:valid {
+    background-color: #afa;
+}
+
+.updateform-input:invalid,
+.createform-input:invalid {
+    background-color: #faa;
+}
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.winkelwagen--thead {
+    background-color: #555;
+    color:#fff;
+    border:solid #555 1px;
+}
+
+.winkelwagen--thead tr th {
+    padding:0 15px;
+}
+
+.winkelwagen--tbody tr {
+    backround-color:#777; border:1px solid #aaa;
+}
+
+.winkelwagen--tbody tr td {
+     padding: 5px 15px;
+}
+
+.winkelwagen--img {
+    width:100px;
+    margin-top:15px;
+}
+
+.winkelwagen--betaalknop {
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: #333;
+
+    cursor: pointer;
+    text-align: center;
+}
+
+.winkelwagen--plusknop,
+.winkelwagen--minknop {
+    background-color: #ff4757;
+    padding: 1px 15px;
+    width: 38px;
+    margin-left: 4px;
+    border-radius: 5px;
+    float: right;
+    color: #333;
+
+    text-align: center;
+}
+
+.winkelwagen--plusknop {
+    background-color: #2ed573;
+}
+
+.winkelwagen--plusknop:hover,
+.winkelwagen--minknop:hover {
+    color:white;
+}
+
+.winkelwagen--centerblok {
+    padding: 30px;
+    min-height: 50vh;
+}
+
+.contact--centerblok {
+    padding: 30px;
+}
+
+.login--center,
+.adminpanel--centerbox  {
+    margin-top: 20px;
+}
+
+.login--center {
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,.135);
+    border-radius: .25rem;
+    background-color: #fafafa;
+}
+
+.adminpanel--margin {
+    width: 100%;
+    height:25px;
+    margin-bottom: 4px;
+}
+
+.specific--contentbox {
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,.135);
+    border-radius: .25rem;
+    background-color: #fafafa;
+}
+
+.specific--naam {
+    font-size: 20px;
+}
+
+.specific--content {
+    padding-left: 5px;
+    height: 225px;
+}
+
+
+.specific--img {
+    padding: 5px;
+    max-height: 225px; */
+    max-width: 100%;
+}
+
+.specific--img--wrap {
+    height: 225px;
+}
+
+.specific--prijs {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff3333;
+}
+
+.specific--beschrijving {}
+
+.specific--contentbox {
+    margin-top: 50px;
+}
+
+.winkelwagen-knop,
+.uitlog-knop,
+.inlog-knop,
+.bekijkproduct-knop,
+.wijzigfoto-knop,
+.wijzigproduct-knop,
+.delete-knop {
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+
+    color: #fff;
+    background-color: #1abc9c;
+    border: solid 2px #1abc9c;
+    box-shadow: 0px 0px 0px #000;
+
+    cursor: pointer;
+}
+
+.winkelwagen-knop:hover,
+.uitlog-knop:hover,
+.inlog-knop:hover,
+.bekijkproduct-knop:hover,
+.wijzigfoto-knop:hover,
+.wijzigproduct-knop:hover,
+.delete-knop:hover {
+    background-color: #0aac8c;
+    border-color: #0aac8c;
+    color: #fff;
+    text-decoration: none;
+}
+
+.winkelwagen-knop,
+.inlog-knop {
+    width: 150px;
+}
+
+.uitlog-knop {
+    margin-left:5px;
+    width: 75px;
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.delete-knop {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.delete-knop:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.admin-panel--buttonwrap {
+    padding: 15px;
+}
+
+.adminpanel--buttons {
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+    height: 25vw;
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+
+    color: #fff;
+    background-color: #1abc9c;
+    border: solid 2px #1abc9c;
+
+    cursor: pointer;
+}
+
+.adminpanel--buttons:hover {
+    background-color: #0aac8c;
+    border-color: #0aac8c;
+    color: #fff;
+    text-decoration: none;
+}
