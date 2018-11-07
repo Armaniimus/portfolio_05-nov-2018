@@ -20,6 +20,7 @@
 
                         <section class="post" id="<?php the_title(); ?>">
                             <h2 class="post_title"><?php the_title(); ?></h2>
+                            <br>
                             <a class="alignleft" href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail('medium'); ?>
                             </a>
@@ -30,7 +31,7 @@
                         <br>
                         <br>
                         <br>
-                        
+
 
                     <?php endwhile; endif; ?>
                 </div>

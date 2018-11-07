@@ -1,0 +1,23 @@
+basis Url projecten
+url: http://localhost/ontwikkelomgeving_portfolio/projectFiles/projecten/
+
+1.	naam:	eerste_website
+	url: 	Y1_P1_eerste-website
+	
+2.	naam: 	radio GaGa
+	url:	Y1_P2_radio-gaga
+
+3.	naam:	ma twente
+	url:	Y1_P3_ma-twente
+
+4.	naam:	over de rhein
+	url:	Y1_P4_over-de-rhein
+
+5.	naam:	stardunks
+	url:	Y2_P3_stardunks
+
+6.	naam:	multiversum
+	url:	Y2_P4_multiversum
+
+7.	naam:	gameplayparties
+	url:	Y3_P1_gameplayparties
