@@ -12,17 +12,16 @@
 <body>
 <header class="row" id="top">
     <div class="header-top-bar float-l col-xs-12">
-        <h1 class="header-top-bar-h1"><a href="<?php bloginfo('url')?>"><?php bloginfo('name')?><a></h1>
+        <h1 class="header-top-bar-h1"><a href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a></h1>
     </div>
+
 
     <div class="headwrap">
         <div class="header-logo">
-            <a href="<?php bloginfo('url'); ?>">
-                <img src="wp-content/themes/Armaniimus-portfolio/images/logo/logo.png" alt="" class="header-logo-img">
-                <div class="header-logo-icon">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </a>
+            <img src="<?php echo get_bloginfo('url') . '/wp-content/themes/Armaniimus-portfolio/images/logo/logo.png'?>" alt="" class="header-logo-img">
+            <div class="header-logo-icon">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
 
         <!-- main nav -->
@@ -38,7 +37,7 @@
             ?>
             <!-- <ul class="float-l header-main-ul mobile_display_none">
                 <li class="float-l header-li">
-                    <a href="<?php bloginfo('url'); ?>" class="float-l">Home<i class="fas fa-home"></i></a>
+                    <a href="" class="float-l">Home<i class="fas fa-home"></i></a>
                 </li>
 
                 <ul class="float-l dropdown-ul">

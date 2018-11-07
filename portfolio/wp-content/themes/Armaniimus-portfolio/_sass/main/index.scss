@@ -1,0 +1,16 @@
+// ====================
+// Import Main styles
+// ====================
+
+//setup colorCodes
+@import 'colors/index.scss';
+
+//basic styles
+@import 'grid/index.scss';
+@import 'basic_styles.scss';
+@import 'background.scss';
+@import 'container--small-container.scss';
+
+//font styles
+@import 'fontAwsome/index.scss';
+@import 'fonts.scss';

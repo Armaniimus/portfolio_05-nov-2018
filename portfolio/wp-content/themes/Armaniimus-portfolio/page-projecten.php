@@ -13,15 +13,24 @@
                 <div class="float-l col-xs-12 col-xl-6 small-container">
 
                     <?php
-                        $args = array( 'category_name' => 'staff' );
+                        $args = array( 'category_name' => $pagename );
                         $query = new WP_Query($args);
                     ?>
-                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
                         <section class="post" id="<?php the_title(); ?>">
                             <h2 class="post_title"><?php the_title(); ?></h2>
-                            <?php the_content(); ?>
+                            <a class="alignleft" href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail('medium'); ?>
+                            </a>
+
+                            <?php the_excerpt(); ?>
+                            <a href="<?php the_permalink();?>">Klik hier om mij te bekijken</a>
                         </section>
+                        <br>
+                        <br>
+                        <br>
+                        
 
                     <?php endwhile; endif; ?>
                 </div>
