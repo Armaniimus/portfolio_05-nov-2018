@@ -2,7 +2,7 @@
 require_once "ContentLogic.php";
 require_once "SessionLogic.php";
 
-require_once "traits\ValidatePHP_ID.php";
+require_once "traits/ValidatePHP_ID.php";
 require_once "PhpUtilities-v2.php";
 
 require_once "DataHandler-v3.2.php";

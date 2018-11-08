@@ -14,7 +14,7 @@ class Controller_login {
         // if ($params != FALSE) {
         //     $this->params = $params;
         // }
-        $this->TemplatingSystem = new TemplatingSystem("view/default.tpl");
+        $this->TemplatingSystem = new TemplatingSystem("View/default.tpl");
         $this->TemplatingSystem->setTemplateData("appdir", APP_DIR);
     }
 
@@ -33,7 +33,7 @@ class Controller_login {
     //     }
     // }
 
-    public function default() {
+    public function my_default() {
         return $this->login();
     }
 
@@ -63,9 +63,9 @@ class Controller_login {
         }
         //control view
 
-        $main = file_get_contents("view/partials/basicLoginForm.html");
+        $main = file_get_contents("View/partials/basicLoginForm.html");
         if ($loginBool == 1) {
-            $main = file_get_contents("view/partials/admin.html");
+            $main = file_get_contents("View/partials/admin.html");
             $this->TemplatingSystem->setTemplateData("main-content", $main);
             $this->TemplatingSystem->setTemplateData("appdir", APP_DIR);
             $this->TemplatingSystem->setTemplateData("loginText", $loginMsg);

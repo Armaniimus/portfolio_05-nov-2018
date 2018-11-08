@@ -3,7 +3,7 @@
 
 
 //-- global variables D: connect(), getcolumnNames(), getTableNames() --//
-$serverInfo = ["Servername" => "localhost", "Username" => "root", "Password" => "", "Databasename" => "armanjn201_project_over_de_rhein"]; //Servername, Username, password, dbname
+$serverInfo = ["Servername" => DB_SERVER_ADRESS, "Username" => DB_USERNAME, "Password" => DB_PASS, "Databasename" => DB_NAME]; //Servername, Username, password, dbname
     //generates table information
     $tableNames = getTableNames();
     $columnNames = [];

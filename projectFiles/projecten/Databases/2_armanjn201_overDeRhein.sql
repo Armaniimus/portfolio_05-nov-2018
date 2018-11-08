@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS`armanjn201_project_over_de_rhein`;
-CREATE DATABASE IF NOT EXISTS `armanjn201_project_over_de_rhein` DEFAULT CHARACTER SET utf8;
-USE `armanjn201_project_over_de_rhein`;
+DROP DATABASE IF EXISTS`armanjn201_projectOverDeRhein`;
+CREATE DATABASE IF NOT EXISTS `armanjn201_projectOverDeRhein` DEFAULT CHARACTER SET utf8;
+USE `armanjn201_projectOverDeRhein`;
 
 CREATE TABLE opdrachten(
     Opdrachtnummer INT AUTO_INCREMENT NOT NULL,

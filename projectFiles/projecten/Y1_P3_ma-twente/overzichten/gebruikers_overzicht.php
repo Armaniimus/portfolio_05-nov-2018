@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="css/style.css">
         <title>Gebruikers overzicht</title>
         <?php $HTN = 1; ?>
-        <?php include('php/database_connect.php') ?>
+        <?php require_once 'php/database_connect.php' ?>
 
     </head>
     <body>

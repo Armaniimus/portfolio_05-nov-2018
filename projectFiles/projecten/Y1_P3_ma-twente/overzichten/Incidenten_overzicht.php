@@ -6,7 +6,7 @@
         <title>configuraties template</title>
 
 		<?php $HTN = 2; ?>
-		<?php include('php/database_connect.php') ?>
+		<?php require_once 'php/database_connect.php' ?>
     </head>
     <body>
         <div id="top">

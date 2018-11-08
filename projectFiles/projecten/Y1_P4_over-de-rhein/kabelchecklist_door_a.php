@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Over de Rhein</title>
         <link rel="stylesheet" href="css/Over_de_Rhein.css">
+        <?PHP require_once "config.php"?>
         <?php include 'php/database_v2.3-2.php'; ?>
     </head>
     <body>

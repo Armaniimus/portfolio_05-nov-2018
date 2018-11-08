@@ -18,7 +18,7 @@ class Controller_catalogus {
 		// if ($params != FALSE) {
 		// 	$this->params = $params;
 		// }
-		$this->TemplatingSystem = new TemplatingSystem("view/default.tpl");
+		$this->TemplatingSystem = new TemplatingSystem("View/default.tpl");
 		$this->TemplatingSystem->setTemplateData("appdir", APP_DIR);
 	}
 
@@ -46,7 +46,7 @@ class Controller_catalogus {
     //     }
     // }
 
-	public function default() {
+	public function my_default() {
 		$this->catalogus();
 	}
 
@@ -154,7 +154,7 @@ class Controller_catalogus {
     		}
 
 			$_SESSION['formdataReservation'] = $_POST;
-    		$main = file_get_contents("view/partials/persoonsgegevens.html");
+    		$main = file_get_contents("View/partials/persoonsgegevens.html");
 			$this->TemplatingSystem->setTemplateData("main-content", $main);
 		}
 
@@ -205,7 +205,7 @@ class Controller_catalogus {
     			}
     		}
 
-    		$main = file_get_contents("view/partials/betaalmethode.html");
+    		$main = file_get_contents("View/partials/betaalmethode.html");
 			$this->TemplatingSystem->setTemplateData("main-content", $main);
     	}
 
@@ -301,12 +301,12 @@ class Controller_catalogus {
 
     		$result = $this->connection->createData($sql);
 
-	    	$main = file_get_contents("view/partials/succesvol.html");
+	    	$main = file_get_contents("View/partials/succesvol.html");
 			$this->TemplatingSystem->setTemplateData("main-content", $main);
 
     	}
 
-    	$main = file_get_contents("view/partials/reserveer.html");
+    	$main = file_get_contents("View/partials/reserveer.html");
 		$this->TemplatingSystem->setTemplateData("main-content", $main);
 		$this->TemplatingSystem->setTemplateData("toeslagen", $toeslagSelect);
 		$this->TemplatingSystem->setTemplateData("tijden", $tijdselect);
@@ -397,7 +397,7 @@ class Controller_catalogus {
 			}
 
 		} else {
-			$main = file_get_contents("view/partials/contact_form.html");
+			$main = file_get_contents("View/partials/contact_form.html");
 			$this->TemplatingSystem->setTemplateData("main-content", $main);
 
 			$loginButtonText = "Login";
@@ -414,7 +414,7 @@ class Controller_catalogus {
 	}
 
 	public function bedankt(){
-   		$main = file_get_contents("view/partials/bedankt.html");
+   		$main = file_get_contents("View/partials/bedankt.html");
 		$this->TemplatingSystem->setTemplateData("main-content", $main);
 
 		$loginButtonText = "Login";
@@ -431,7 +431,7 @@ class Controller_catalogus {
 	public function home() {
 		$selectQuery = "SELECT tab_titel,pagina_titel,content_naam,content,pagina_beschrijving,steekwoorden FROM content WHERE contentID='1'";
 
-		$main = file_get_contents("view/partials/homePage.html");
+		$main = file_get_contents("View/partials/homePage.html");
 		$content = $this->connection->queryRead($selectQuery);
 
 		if (count($content) == 0) {

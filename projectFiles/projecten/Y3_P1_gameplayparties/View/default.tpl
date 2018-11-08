@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="nl" dir="ltr">
     <head>
-        <link rel="stylesheet" href="{appdir}/view/css/responsive.css">
-        <link rel="stylesheet" href="{appdir}/view/css/master.css">
-        <link rel="stylesheet" href="{appdir}/view/css/grid-v1.3.1.css">
+        <link rel="stylesheet" href="{appdir}/View/css/responsive.css">
+        <link rel="stylesheet" href="{appdir}/View/css/master.css">
+        <link rel="stylesheet" href="{appdir}/View/css/grid-v1.3.1.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <meta charset="utf-8">
         <title>GamePlayParty</title>
@@ -12,7 +12,7 @@
         <div class="content">
 
             <header class="siteHeader">
-                <img  src="{appdir}/view/images/gpp.svg">
+                <img  src="{appdir}/View/images/gpp.svg">
                     <a href="{appdir}" >
                         <button class="goHomeButton"  type="button" name="button"></button>
                     </a>

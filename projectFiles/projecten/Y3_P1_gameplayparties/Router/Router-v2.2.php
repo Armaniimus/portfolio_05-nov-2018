@@ -14,7 +14,7 @@ class Router {
     Private $method;            /** @property string */
     Private $params;            /** @property array  all parameters for the controller*/
 
-    // properties to be helpfull while debugging     
+    // properties to be helpfull while debugging
     Public  $filteredPackets;   /** @property array  packets that are sliced at the front*/
     Public  $error;             /** @property string */
     Public  $errorMessage;      /** @property string */
@@ -113,23 +113,23 @@ class Router {
         // check if method param is given
         // if not check if there is a default
         if (!$method) {
-            if (!method_exists($this->controller, "default") ) {
+            if (!method_exists($this->controller, "my_default") ) {
                 $this->error = "E4";
                 $this->errorMessage = "no method was given and no default found";
                 return FALSE;
             }
-            $this->method = "default";
+            $this->method = "my_default";
         }
 
         // checks if the method exists in the class
         // if not check if there is a default
         if (!method_exists($this->controller, $method) ) {
-            if (!method_exists($this->controller, "default") ) {
+            if (!method_exists($this->controller, "my_default") ) {
                 $this->error = "E5";
                 $this->errorMessage = "method doesn't exist in the controller_class and no default found";
                 return FALSE;
             }
-            $this->method = "default";
+            $this->method = "my_default";
         }
 
         return TRUE;

@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS armanjn201_project_MA_Twente;
-CREATE DATABASE armanjn201_project_MA_Twente;
-USE armanjn201_project_MA_Twente;
+DROP DATABASE IF EXISTS armanjn201_mATwente;
+CREATE DATABASE armanjn201_mATwente;
+USE armanjn201_mATwente;
 
 -- phpMyAdmin SQL Dump
 -- version 4.5.1

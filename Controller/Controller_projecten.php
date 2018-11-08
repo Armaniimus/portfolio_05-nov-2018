@@ -4,12 +4,12 @@
  *
  */
 class Controller_projecten {
-    private $mainUrlPart = "http://localhost/ontwikkelomgeving_portfolio/projectFiles/projecten/";
+    private $mainUrlPart = PROJECTEN_MAIN_URL;
     function __construct() {
         $this->TemplatingSystem = new TemplatingSystem("view/templates/default.tpl");
     }
 
-    public function default() {
+    public function my_default() {
         return $this->multiversum();
     }
 

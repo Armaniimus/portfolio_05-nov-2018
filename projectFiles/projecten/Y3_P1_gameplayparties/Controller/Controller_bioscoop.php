@@ -45,7 +45,7 @@
         //     }
         // }
 
-        public function default() {
+        public function my_default() {
             $this->read();
         }
 
@@ -76,7 +76,7 @@
                     header("Location: http://localhost/shelter/gameparty_project_met_georgi/bioscoop/read");
                 }
 
-                $main = file_get_contents("view/partials/bios_create.html");
+                $main = file_get_contents("View/partials/bios_create.html");
                 $this->TemplatingSystem->setTemplateData("content", $main);
                 $return = $this->TemplatingSystem->getParsedTemplate();
 
@@ -221,7 +221,7 @@
 
                 }
 
-                $main = file_get_contents("view/partials/bios_read.html");
+                $main = file_get_contents("View/partials/bios_read.html");
 
                 $this->TemplatingSystem->setTemplateData("content", $main);
                 $this->TemplatingSystem->setTemplateData("naam", $naam);
@@ -262,7 +262,7 @@
             // check login Info
             // if ($_SESSION["loginBool"] === 1) {
             if (1==1) {
-                $main = file_get_contents("view/partials/bios_overzicht.html");
+                $main = file_get_contents("View/partials/bios_overzicht.html");
                 $this->TemplatingSystem->setTemplateData("main-content", $main);
                 $this->TemplatingSystem->setTemplateData("appdir", APP_DIR);
 

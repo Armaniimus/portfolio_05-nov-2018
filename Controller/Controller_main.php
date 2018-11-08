@@ -8,12 +8,13 @@ class Controller_main {
         $this->TemplatingSystem = new TemplatingSystem("view/templates/default.tpl");
     }
 
-    public function default() {
+    public function my_default() {
         $this->redirectPortfolio();
     }
 
     public function redirectPortfolio() {
-        header('Location: portfolio');
+        $url = MAIN_SITE;
+        header("Location: $url");
     }
 
     public function test() {

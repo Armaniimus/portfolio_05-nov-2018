@@ -18,7 +18,7 @@ class Controller_content {
 		// }
 
 		$loginBool = $_SESSION["loginBool"];
-		$this->TemplatingSystem = new TemplatingSystem("view/default.tpl");
+		$this->TemplatingSystem = new TemplatingSystem("View/default.tpl");
 		$this->TemplatingSystem->setTemplateData("appdir", APP_DIR);
 		$loginButtonText = "Login";
 		if ($loginBool == 1) {
@@ -44,14 +44,14 @@ class Controller_content {
     //     }
     // }
 
-	public function default() {
+	public function my_default() {
 		return header("Location: ".APP_DIR." ");
 	}
 
 	private function overons() {
 		$selectQuery = "SELECT tab_titel,pagina_titel,content_naam,content,pagina_beschrijving,steekwoorden FROM content WHERE contentID='1' ";
 
-		$main = file_get_contents("view/partials/content.html");
+		$main = file_get_contents("View/partials/content.html");
 		$content = $this->connection->QueryRead($selectQuery);
 
 		$tab_titel = $content[0]["tab_titel"];

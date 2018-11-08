@@ -12,7 +12,7 @@
 
       <header class="siteHeader">
 
-        <img  src="<?php echo APP_DIR?>/view/images/gpp.svg"><a href="<?php echo APP_DIR?>" ><button class="goHomeButton"  type="button" name="button"></button></a></img>
+        <img  src="<?php echo APP_DIR?>/View/images/gpp.svg"><a href="<?php echo APP_DIR?>" ><button class="goHomeButton"  type="button" name="button"></button></a></img>
         <div class="headerButtonGroup">
       <a class="headerButtonSingle" href="<?php echo APP_DIR?>/catalogus/contact">
       <button class="headerButtonSingle1" type="button" name="button">Contact</button>
@@ -37,7 +37,7 @@
       </button>
         </div>
 
-        
+
         <!-- <div class="adminMenuTriangle">
           <label class="col-xs-12 adminMenuContent"></label>
           <label class="col-xs-12 adminMenuContent"></label>

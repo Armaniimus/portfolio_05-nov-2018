@@ -16,8 +16,9 @@
 
 
 <?php
+require_once 'config.php';
 require_once 'controller/ProductsController.php';
-$productsController = new ProductsController("armanjn201_stardunks", "root", "");
+$productsController = new ProductsController(DB_NAME, DB_USERNAME, DB_PASS, DB_SERVER_ADRESS, DB_TYPE);
 $productsController->handleRequest();
 
 ?>

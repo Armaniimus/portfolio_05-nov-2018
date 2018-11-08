@@ -1,5 +1,5 @@
 <?php
-    require_once "traits\ValidatePHP_ID.php";
+    require_once "traits/ValidatePHP_ID.php";
     require_once "PhpUtilities-v2.php";
     class DataHandler {
         private $conn;

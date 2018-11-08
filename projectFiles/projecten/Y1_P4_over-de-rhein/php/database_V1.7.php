@@ -4,7 +4,7 @@
 //-- Start global variables                  --//
 //-- Dependency connect(), getColumnNames(); --//
 //---------------------------------------------//
-$serverInfo = ["localhost", "root", "", "armanjn201_project_over_de_rhein"]; //Servername, Username, password, dbname
+$serverInfo = [DB_SERVER_ADRESS, DB_USERNAME, DB_PASS, DB_NAME]; //Servername, Username, password, dbname
     //generates table information
     $tableNames = getTableNames();
     $columnNames = [];

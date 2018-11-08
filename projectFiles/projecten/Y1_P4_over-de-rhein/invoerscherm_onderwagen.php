@@ -5,6 +5,7 @@
         <title>Onderwagen</title>
     </head>
     <link rel="stylesheet" href="css\mystylesheet.css">
+    <?PHP require_once "config.php"?>
     <?php include "php/dbfuncties.php"; ?>
     <body>
         <div class="main">

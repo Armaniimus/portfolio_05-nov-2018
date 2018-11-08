@@ -1,4 +1,5 @@
 <?php
+require_once "config.php";
 //Instructie
     //1. kopieer bovenste regel bovenin de header
     //2. Kopieer onderste regel en zet deze daarboven
@@ -71,12 +72,12 @@ $HTArray = array();
 ///////////////////////////////
 
 function createConnection() {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "armanjn201_project_ma_twente";
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "armanjn201_project_ma_twente";
     // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli(DB_SERVER_ADRESS, DB_USERNAME, DB_PASS, DB_NAME);
 
     // Check connection
     if ($conn->connect_error) {
