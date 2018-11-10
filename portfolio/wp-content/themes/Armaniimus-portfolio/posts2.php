@@ -7,6 +7,6 @@
 
 <?php endwhile; else : ?>
 
-    <?php _e('Sorry, no posts matched your criteria'); ?>
+    <?php _e('Sorry, we hebben uw gevraagde content niet kunnen vinden.'); ?>
 
 <?php endif; ?>
