@@ -12,6 +12,9 @@
 .float-l {
   float: left; }
 
+[class*="col-"] {
+  float: left; }
+
 .float-r {
   float: right; }
 
@@ -19,6 +22,7 @@
 /* [class*="col-"] {
     border: solid green 1px;
 } */
+/* set defaults for display classes */
 .display-xs-block,
 .display-s-block,
 .display-m-block,
@@ -6745,6 +6749,50 @@ nav,
 
 .post-title-a:hover {
   color: #050; }
+
+.archive-post-wrap {
+  padding: 15px; }
+
+.archive-post {
+  padding: 15px;
+  padding-bottom: 45px;
+  border: 1px solid #888;
+  border-radius: 3px;
+  height: 1050px; }
+
+.archive-post img {
+  max-width: 100%;
+  height: auto; }
+
+.archive-post > p > a {
+  background-color: #70CF1B;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 0px solid #50b015;
+  border-color: #50b015;
+  border-style: solid;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  float: left;
+  margin-right: 5px; }
+
+.archive-post > p > a:hover {
+  text-decoration: underline;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px; }
+
+.archive-post > ul {
+  padding-left: 15px; }
+
+.archive-post > ul > li {
+  list-style: disc; }
+
+.archive-post h4 {
+  margin-bottom: -12px; }
 
 img.alignright, a.alignright {
   float: right;
