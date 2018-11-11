@@ -8,8 +8,10 @@
 
 
 .archive-post {
+    box-shadow: 1px 1px 4px $grid-shadow;
     padding: 15px;
     padding-bottom: 45px;
+    background-color: $grid-background;
     border: 1px solid $grid-border;
     border-radius: 3px;
     height: 1050px;

@@ -2,6 +2,9 @@
     padding: 30px;
     border: $contentContain_Border solid 1px;
     background-color: $contentContain_BColor;
+    box-shadow:
+        4px 4px 4px -4px $contentContain_shadow,
+        -4px 4px 4px -4px $contentContain_shadow;
 }
 
 .small-container {
