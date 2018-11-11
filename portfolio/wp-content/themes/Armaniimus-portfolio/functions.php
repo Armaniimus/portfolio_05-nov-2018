@@ -42,6 +42,7 @@ add_action( 'wp_enqueue_scripts', 'armaniimus_theme_styles');
 function armaniimus_theme_js() {
     wp_enqueue_script('hamburger_controller_js', get_template_directory_uri() . '/js/hamburger_controller.js', '', '', true );
     wp_enqueue_script('nav_controller_js', get_template_directory_uri() . '/js/nav_controller.js', '', '', true );
+    wp_enqueue_script('grid_height_controller_js', get_template_directory_uri() . '/js/grid_height_controller.js', '', '', false );
 }
 add_action( 'wp_enqueue_scripts', 'armaniimus_theme_js');
 
