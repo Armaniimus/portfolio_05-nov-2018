@@ -1,3 +1,10 @@
+html {
+	font-family: "Lucida Sans", sans-serif;
+	display: block;
+	// background: radial-gradient(#252 -60%, #020 50%, #000);
+	z-index: 0;
+}
+
 footer, main, header {
 	margin-left: 0px;
 	margin-right: 0px;
@@ -8,5 +15,5 @@ html, body{
 	height: 100%;
 	width: 100%;
 	margin: 0px;
-	background-color: #ded;
+	background-color: $background;
 }
