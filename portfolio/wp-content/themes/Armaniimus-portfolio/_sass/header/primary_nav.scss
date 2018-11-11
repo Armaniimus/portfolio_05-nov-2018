@@ -1,8 +1,8 @@
-.header-logo-icon {
+.header-main .header-logo-icon {
 
 }
 
-.menu-item {
+.header-main .menu-item {
     float: left;
     background: linear-gradient($darkgreen -40%, $lightgreen, $darkgreen 140%);
     color: azure;
@@ -10,12 +10,12 @@
     text-shadow: 1px 1px 0px $darkgreen, 2px 2px 1px $darkgreen;
 }
 
-.menu-item:hover {
+.header-main .menu-item:hover {
     background: linear-gradient($darkgreen -10%, $darkerlightgreen, $darkgreen 110%);
 }
 
 //select where parent is menuItem
-.menu-item > a {
+.header-main .menu-item > a {
     padding: 15px;
     display: block;
     margin: 0;
@@ -23,25 +23,25 @@
     text-decoration: none;
 }
 
-.submenu {
+.header-main .submenu {
     clear: both;
 }
 
-.submenu > li {
+.header-main .submenu > li {
     display: relative;
     clear: both !important;
 }
 
-.menu-item-has-children {
+.header-main .menu-item-has-children {
     position: relative;
 }
 
-.menu-item-has-children > ul {
+.header-main .menu-item-has-children > ul {
     display: none;
 }
 
 //load icon
-.menu-item-has-children:hover > ul {
+.header-main .menu-item-has-children:hover > ul {
    display: block;
    border: 1px solid black;
 }
