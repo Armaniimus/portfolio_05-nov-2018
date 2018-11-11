@@ -11,7 +11,7 @@
 </head>
 <body>
 <header class="row" id="top">
-    <div class="header-top-bar float-l col-xs-12">
+    <div class="header-top-bar col-xs-12">
         <h1 class="header-top-bar-h1"><a href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a></h1>
     </div>
 
