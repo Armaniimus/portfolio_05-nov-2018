@@ -32,7 +32,9 @@
         <div class="col-xs-0 col-s-1" ><br></div>
     </main>
     <script>
-        heightController = new grid_height_controller('archive-post', [1,1,2,3,3]);
+        window.onload = function() {
+            heightController = new grid_height_controller('archive-post', [1,1,2,3,3]);
+        }
     </script>
     <!-- <h1>index file </h1> -->
 <?php get_footer(); ?>

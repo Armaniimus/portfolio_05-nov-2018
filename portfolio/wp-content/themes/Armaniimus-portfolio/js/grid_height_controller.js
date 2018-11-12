@@ -4,7 +4,7 @@ class grid_height_controller {
         this.columnSettings = this.setColumns(columnsArray);
 
         window.addEventListener('resize', this.controlResize.bind(this));
-        this.run()
+        this.run();
     }
 
     getItems(cssClassname) {
