@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <canvas style="border: 1px solid black; width: 50%" id="my_canvas">
+
+        </canvas>
+    </body>
+</html>
+
+<script type="text/javascript" src="js/canvas_drawing_methods/calcMethods.js"></script>
+
+<!-- setCanvasMetaData -->
+<script type="text/javascript" src="js/canvas_drawing_methods/set_canvas_meta_data.js"></script>
+
+<!-- include canvas_drawing_methods -->
+<script type="text/javascript" src="js/canvas_drawing_methods/draw_triangle.js"></script>
+<script type="text/javascript" src="js/canvas_drawing_methods/draw_rectangle.js"></script>
+<script type="text/javascript" src="js/canvas_drawing_methods/draw_simple_polygon.js"></script>
+
+<!-- round shapes -->
+<script type="text/javascript" src="js/canvas_drawing_methods/draw_circlepiece.js"></script>
+<script type="text/javascript" src="js/canvas_drawing_methods/draw_piepiece.js"></script>
+
+<!-- drawwords -->
+<script type="text/javascript" src="js/canvas_drawing_methods/draw_clocklikeword.js"></script>
+
+<!-- project jsscript -->
+<script type="text/javascript">
+    const canvas = new setCanvasMetaData("my_canvas");
+    const ctx = canvas.ctx
+
+    triangle1 = new DrawTriangle(canvas.centX, canvas.centY, 45/180, 250, 180, 1, "rgba(0, 125, 0, 0.75)");
+    // triangle1.toggleFill()
+    triangle1.toggleStroke()
+    triangle1.toggleMarkCenter()
+    triangle1.render()
+    // triangle1.render();
+    //     triangle1.rotation += 0.1;
+    // triangle1.render();
+    //     triangle1.rotation += 0.1;
+    // triangle1.render();
+
+    i = 0
+    ii = 0
+    xx = 80
+    yy = 1
+    setInterval(function () {
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        // triangle1.rotation += 0.0025;
+        triangle1.angleA += 0.002
+        // triangle1.x += xx * 0.5;
+        // triangle1.y += yy * 0.5
+        //
+        // if (i <= -160) {
+        //     xx = 1
+        // } else if (i >= 160) {
+        //     xx = -1;
+        // }
+        //
+        // if (ii <= -160) {
+        //     yy = 1;
+        // } else if (ii >= 160) {
+        //     yy = -1;
+        // }
+        //
+        // i += xx;
+        // ii += yy;
+
+        triangle1.render();
+    }, 15)
+</script>
