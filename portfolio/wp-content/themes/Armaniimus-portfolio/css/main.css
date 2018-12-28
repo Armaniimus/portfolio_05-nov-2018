@@ -6798,4 +6798,11 @@ img.aligncenter, a.aligncenter {
 .page-sidebar-primary {
   border-right: solid 1px #9f9f9f; }
 
+#armaniimusTheme_home > blockquote {
+  font-weight: bold;
+  margin: 0px; }
+
+#armaniimusTheme_home > blockquote > p {
+  font-size: 20px; }
+
 /*# sourceMappingURL=main.css.map */
