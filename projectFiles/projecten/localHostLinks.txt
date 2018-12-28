@@ -21,3 +21,9 @@ url: http://localhost/ontwikkelomgeving_portfolio/projectFiles/projecten/
 
 7.	naam:	gameplayparties
 	url:	Y3_P1_gameplayparties
+
+8.	naam:	3 op een rij
+	url:	3-op-een-rij
+
+9.	naam:	kleurenwiel
+	url:	kleurenwiel
