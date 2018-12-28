@@ -5,13 +5,13 @@
 
             <!-- Repeating posts -->
             <div class="row">
+                <h2 class="archive-page-title"><?php single_term_title()?></h2>
                 <div class="float-l col-xs-12 col-xl-12 archive">
-
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
                         <article class="archive-post-wrap col-xs-12 col-m-6 col-l-4" id="<?php the_title(); ?>">
                             <div class="archive-post">
-                                <h2 class="archive-post-title"><?php the_title(); ?></h2>
+                                <h3 class="post-title"><?php the_title(); ?></h3>
                                 <!-- start content -->
                                 <?php the_content(); ?>
                                 <!-- end content -->
@@ -24,6 +24,7 @@
 
             <!-- back to top link -->
             <div class="row">
+                <br>
                 <br>
                 <a class="back-to-top-link" href="#top">Terug naar boven</a>
             </div>

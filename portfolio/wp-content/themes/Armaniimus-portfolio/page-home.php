@@ -24,6 +24,7 @@
             <!-- back to top link -->
             <div class="row">
                 <br>
+                <br>
                 <a class="back-to-top-link" href="#top">Terug naar boven</a>
             </div>
 

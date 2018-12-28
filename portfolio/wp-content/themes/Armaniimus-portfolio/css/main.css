@@ -6440,11 +6440,12 @@ h1 {
   font-weight: 500; }
 
 h2 {
-  padding-left: 5px;
+  margin-top: 10px;
   margin-bottom: -10px;
-  color: #282828;
-  font-size: 1.175rem;
-  font-weight: 450; }
+  font-weight: 450;
+  font-size: 25px;
+  color: #080;
+  text-shadow: 1px 1px #040; }
 
 h3 {
   color: #005500;
@@ -6770,6 +6771,10 @@ nav,
 
 .archive-post h4 {
   margin-bottom: -12px; }
+
+.archive-page-title {
+  margin-left: 15px;
+  margin-bottom: 5px; }
 
 img.alignright, a.alignright {
   float: right;
