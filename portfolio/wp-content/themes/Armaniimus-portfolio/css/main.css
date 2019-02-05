@@ -249,7 +249,7 @@ html, body {
 .container {
   padding: 30px;
   background-color: white;
-  box-shadow: 4px 0px 4px -4px #aaa, -4px 0px 4px -4px #aaa; }
+  box-shadow: 5px 0px 4px -4px #aaa, -5px 0px 4px -4px #aaa; }
 
 .small-container {
   padding: 0px 15px; }
@@ -6731,7 +6731,7 @@ nav,
   padding: 15px; }
 
 .archive-post {
-  box-shadow: 1px 1px 4px rgba(70, 150, 18, 0.35);
+  box-shadow: 1px 1px 4px #aaa, 0px 0px 2px #aaa;
   padding: 15px;
   padding-bottom: 45px;
   background-color: white;
