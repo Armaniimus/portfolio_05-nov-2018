@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <main class="row">
-        <div class="col-xs-0 col-s-1" ><br></div>
-        <div class="col-xs-12 col-s-10 container">
+        <!-- <div class="col-xs-0 col-m-1" ><br></div> -->
+        <div class="col-xs-12 col-m-12 container">
 
             <!-- Repeating posts -->
             <div class="row">
@@ -30,7 +30,7 @@
             </div>
 
         </div>
-        <div class="col-xs-0 col-s-1" ><br></div>
+        <!-- <div class="col-xs-0 col-m-1" ><br></div> -->
     </main>
     <script>
         window.onload = function() {

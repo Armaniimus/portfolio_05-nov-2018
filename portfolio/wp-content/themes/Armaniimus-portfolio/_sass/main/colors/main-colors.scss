@@ -12,14 +12,12 @@ $copyright:              #ddd;
 
 $sidebarBorder:          #9f9f9f;
 
-$background:             #eee;
+$background:             white;
 $contentContain_shadow:  #aaa;
-$contentContain_Border:  #ccc;
 $contentContain_BColor:  white;
 
-$grid-shadow:            #aaa;
-$grid-border:            #e7e7e7;
-$grid-background:        #f6fff6;
+$grid-shadow:            rgba(70, 150, 18, 0.35);
+$grid-background:        white;
 $grid-button-color:      $lightgreen;
 $grid-button-border:     $darkerlightgreen;
 $grid-button-text-color: white;
