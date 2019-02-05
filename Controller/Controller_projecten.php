@@ -48,11 +48,6 @@ class Controller_projecten {
         $url = $this->mainUrlPart ."Y3_P1_gameplayparties";
         header("location: $url");
     }
-
-    public function kleurenwiel() {
-        $url = $this->mainUrlPart ."canvasKleurenwiel";
-        header("location: $url");
-    }
 }
 
  ?>

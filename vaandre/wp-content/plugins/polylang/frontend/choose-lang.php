@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Base class to choose the language
+ * base class to choose the language
  *
  * @since 1.2
  */
@@ -10,7 +10,7 @@ abstract class PLL_Choose_Lang {
 	public $curlang;
 
 	/**
-	 * Constructor
+	 * constructor
 	 *
 	 * @since 1.2
 	 *
@@ -25,9 +25,9 @@ abstract class PLL_Choose_Lang {
 	}
 
 	/**
-	 * Sets the language for ajax requests
+	 * sets the language for ajax requests
 	 * and setup actions
-	 * Any child class must call this method if it overrides it
+	 * any child class must call this method if it overrides it
 	 *
 	 * @since 1.8
 	 */
@@ -42,22 +42,22 @@ abstract class PLL_Choose_Lang {
 	}
 
 	/**
-	 * Writes language cookie
-	 * Loads user defined translations
-	 * Fires the action 'pll_language_defined'
+	 * writes language cookie
+	 * loads user defined translations
+	 * fires the action 'pll_language_defined'
 	 *
 	 * @since 1.2
 	 *
 	 * @param object $curlang current language
 	 */
 	protected function set_language( $curlang ) {
-		// Don't set the language a second time
+		// don't set the language a second time
 		if ( isset( $this->curlang ) ) {
 			return;
 		}
 
-		// Final check in case $curlang has an unexpected value
-		// See https://wordpress.org/support/topic/detect-browser-language-sometimes-setting-null-language
+		// final check in case $curlang has an unexpected value
+		// see https://wordpress.org/support/topic/detect-browser-language-sometimes-setting-null-language
 		$this->curlang = ( $curlang instanceof PLL_Language ) ? $curlang : $this->model->get_language( $this->options['default_lang'] );
 
 		$GLOBALS['text_direction'] = $this->curlang->is_rtl ? 'rtl' : 'ltr';
@@ -74,20 +74,18 @@ abstract class PLL_Choose_Lang {
 	}
 
 	/**
-	 * Set a cookie to remember the language.
-	 * Setting PLL_COOKIE to false will disable cookie although it will break some functionalities
+	 * set a cookie to remember the language.
+	 * possibility to set PLL_COOKIE to false will disable cookie although it will break some functionalities
 	 *
 	 * @since 1.5
 	 */
 	public function maybe_setcookie() {
-		// Don't set cookie in javascript when a cache plugin is active
-		// Check headers have not been sent to avoid ugly error
-		// Cookie domain must be set to false for localhost ( default value for COOKIE_DOMAIN ) thanks to Stephen Harris.
-		if ( ! pll_is_cache_active() && ! headers_sent() && PLL_COOKIE !== false && ! empty( $this->curlang ) && ( ! isset( $_COOKIE[ PLL_COOKIE ] ) || $_COOKIE[ PLL_COOKIE ] != $this->curlang->slug ) && ! is_404() ) {
+		// check headers have not been sent to avoid ugly error
+		// cookie domain must be set to false for localhost ( default value for COOKIE_DOMAIN ) thanks to Stephen Harris.
+		if ( ! headers_sent() && PLL_COOKIE !== false && ! empty( $this->curlang ) && ( ! isset( $_COOKIE[ PLL_COOKIE ] ) || $_COOKIE[ PLL_COOKIE ] != $this->curlang->slug ) && ! is_404() ) {
 
 			/**
 			 * Filter the Polylang cookie duration
-			 * /!\ this filter may be fired *before* the theme is loaded
 			 *
 			 * @since 1.8
 			 *
@@ -107,8 +105,8 @@ abstract class PLL_Choose_Lang {
 	}
 
 	/**
-	 * Get the preferred language according to the browser preferences
-	 * Code adapted from http://www.thefutureoftheweb.com/blog/use-accept-language-header
+	 * get the preferred language according to the browser preferences
+	 * code adapted from http://www.thefutureoftheweb.com/blog/use-accept-language-header
 	 *
 	 * @since 1.8
 	 *
@@ -118,26 +116,26 @@ abstract class PLL_Choose_Lang {
 		$accept_langs = array();
 
 		if ( isset( $_SERVER['HTTP_ACCEPT_LANGUAGE'] ) ) {
-			// Break up string into pieces ( languages and q factors )
+			// break up string into pieces ( languages and q factors )
 			preg_match_all( '/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*( 1|0\.[0-9]+))?/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $lang_parse );
 
 			$k = $lang_parse[1];
 			$v = $lang_parse[4];
 
 			if ( $n = count( $k ) ) {
-				// Set default to 1 for any without q factor
+				// set default to 1 for any without q factor
 				foreach ( $v as $key => $val ) {
 					if ( '' === $val ) {
 						$v[ $key ] = 1;
 					}
 				}
 
-				// Bubble sort ( need a stable sort for Android, so can't use a PHP sort function )
+				// bubble sort ( need a stable sort for Android, so can't use a PHP sort function )
 				if ( $n > 1 ) {
 					for ( $i = 2; $i <= $n; $i++ ) {
 						for ( $j = 0; $j <= $n - 2; $j++ ) {
 							if ( $v[ $j ] < $v[ $j + 1 ] ) {
-								// Swap values
+								// swap values
 								$temp = $v[ $j ];
 								$v[ $j ] = $v[ $j + 1 ];
 								$v[ $j + 1 ] = $temp;
@@ -184,7 +182,7 @@ abstract class PLL_Choose_Lang {
 	}
 
 	/**
-	 * Returns the language according to browser preference or the default language
+	 * returns the language according to browser preference or the default language
 	 *
 	 * @since 0.1
 	 *
@@ -213,7 +211,7 @@ abstract class PLL_Choose_Lang {
 	}
 
 	/**
-	 * Sets the language when home page is requested
+	 * sets the language when home page is requested
 	 *
 	 * @since 1.2
 	 */
@@ -227,14 +225,14 @@ abstract class PLL_Choose_Lang {
 	}
 
 	/**
-	 * To call when the home page has been requested
-	 * Make sure to call this after 'setup_theme' has been fired as we need $wp_query
-	 * Performs a redirection to the home page in the current language if needed
+	 * to call when the home page has been requested
+	 * make sure to call this after 'setup_theme' has been fired as we need $wp_query
+	 * performs a redirection to the home page in the current language if needed
 	 *
 	 * @since 0.9
 	 */
 	public function home_requested() {
-		// We are already on the right page
+		// we are already on the right page
 		if ( $this->options['default_lang'] == $this->curlang->slug && $this->options['hide_default'] ) {
 			$this->set_curlang_in_query( $GLOBALS['wp_query'] );
 
@@ -245,25 +243,23 @@ abstract class PLL_Choose_Lang {
 			 */
 			do_action( 'pll_home_requested' );
 		}
-		// Redirect to the home page in the right language
-		// Test to avoid crash if get_home_url returns something wrong
+		// redirect to the home page in the right language
+		// test to avoid crash if get_home_url returns something wrong
 		// FIXME why this happens? http://wordpress.org/support/topic/polylang-crashes-1
-		// Don't redirect if $_POST is not empty as it could break other plugins
-		// Don't forget the query string which may be added by plugins
+		// don't redirect if $_POST is not empty as it could break other plugins
+		// don't forget the query string which may be added by plugins
 		elseif ( is_string( $redirect = $this->curlang->home_url ) && empty( $_POST ) ) {
 			$redirect = empty( $_SERVER['QUERY_STRING'] ) ? $redirect : $redirect . ( $this->links_model->using_permalinks ? '?' : '&' ) . $_SERVER['QUERY_STRING'];
 
 			/**
 			 * When a visitor reaches the site home, Polylang redirects to the home page in the correct language.
 			 * This filter allows plugins to modify the redirected url or prevent this redirection
-			 * /!\ this filter may be fired *before* the theme is loaded
 			 *
 			 * @since 1.1.1
 			 *
 			 * @param string $redirect the url the visitor will be redirected to
 			 */
 			if ( $redirect = apply_filters( 'pll_redirect_home', $redirect ) ) {
-				$this->maybe_setcookie();
 				wp_redirect( $redirect );
 				exit;
 			}
@@ -271,7 +267,7 @@ abstract class PLL_Choose_Lang {
 	}
 
 	/**
-	 * Set the language when posting a comment
+	 * set the language when posting a comment
 	 *
 	 * @since 0.8.4
 	 *
@@ -282,7 +278,7 @@ abstract class PLL_Choose_Lang {
 	}
 
 	/**
-	 * Modifies some main query vars for home page and page for posts
+	 * modifies some main query vars for home page and page for posts
 	 * to enable one home page ( and one page for posts ) per language
 	 *
 	 * @since 1.2

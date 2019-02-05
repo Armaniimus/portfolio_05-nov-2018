@@ -8,7 +8,7 @@
 class PLL_Settings_Tools extends PLL_Settings_Module {
 
 	/**
-	 * Constructor
+	 * constructor
 	 *
 	 * @since 1.8
 	 *
@@ -23,7 +23,7 @@ class PLL_Settings_Tools extends PLL_Settings_Module {
 	}
 
 	/**
-	 * Displays the settings form
+	 * displays the settings form
 	 *
 	 * @since 1.8
 	 */
@@ -36,7 +36,7 @@ class PLL_Settings_Tools extends PLL_Settings_Module {
 	}
 
 	/**
-	 * Sanitizes the settings before saving
+	 * sanitizes the settings before saving
 	 *
 	 * @since 1.8
 	 *
@@ -44,6 +44,6 @@ class PLL_Settings_Tools extends PLL_Settings_Module {
 	 */
 	protected function update( $options ) {
 		$newoptions['uninstall'] = isset( $options['uninstall'] ) ? 1 : 0;
-		return $newoptions; // Take care to return only validated options
+		return $newoptions; // take care to return only validated options
 	}
 }

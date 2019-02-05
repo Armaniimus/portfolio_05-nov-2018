@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * The list of flags
  *
- * For each flag:
+ * for each flag:
  * the key is the flag file name (without the extension)
  * the value is the Country name
  */

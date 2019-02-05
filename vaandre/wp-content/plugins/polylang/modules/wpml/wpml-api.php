@@ -3,7 +3,6 @@
 /**
  * A class to handle the WPML API based on hooks, introduced since WPML 3.2
  * It partly relies on the legacy API
- *
  * @see https://wpml.org/documentation/support/wpml-coding-api/wpml-hooks-reference/
  *
  * @since 2.0

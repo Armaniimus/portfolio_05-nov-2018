@@ -32,7 +32,7 @@ class PLL_Admin_Filters_Term {
 			add_action( $tax . '_edit_form_fields', array( $this, 'edit_term_form' ) );
 
 			// Adds action related to languages when deleting categories and post tags
-			add_action( 'pre_delete_term', array( $this, 'delete_term' ) );
+			add_action( 'delete_' . $tax, array( $this, 'delete_term' ) );
 		}
 
 		// Adds actions related to languages when creating or saving categories and post tags
@@ -52,8 +52,8 @@ class PLL_Admin_Filters_Term {
 
 		// Filters categories and post tags by language
 		add_filter( 'terms_clauses', array( $this, 'terms_clauses' ), 10, 3 );
-		add_action( 'pre_get_posts', array( $this, 'set_tax_query_lang' ), 999 );
-		add_action( 'posts_selection', array( $this, 'unset_tax_query_lang' ), 0 );
+		add_action( 'parse_query', array( $this, 'set_tax_query_lang' ) );
+		add_action( 'posts_selection', array( $this, 'unset_tax_query_lang' ) );
 
 		// Allows to get the default categories in all languages
 		add_filter( 'option_default_category', array( $this, 'option_default_category' ) );
@@ -186,7 +186,7 @@ class PLL_Admin_Filters_Term {
 	}
 
 	/**
-	 * Stores the current post_id when bulk editing posts for use in save_language and pre_term_slug
+	 * stores the current post_id when bulk editing posts for use in save_language and pre_term_slug
 	 *
 	 * @since 1.7
 	 *

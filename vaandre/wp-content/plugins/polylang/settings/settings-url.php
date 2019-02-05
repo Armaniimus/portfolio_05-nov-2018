@@ -31,8 +31,7 @@ class PLL_Settings_Url extends PLL_Settings_Module {
 	 *
 	 * @since 1.8
 	 */
-	protected function force_lang() {
-		?>
+	protected function force_lang() {?>
 		<label>
 			<?php
 			printf(

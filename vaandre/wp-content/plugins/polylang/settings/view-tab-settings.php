@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Displays the settings tab in Polylang settings
+ * displays the settings tab in Polylang settings
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Don't access directly
+	exit; // don't access directly
 };
 ?>
 <div class="form-wrap">

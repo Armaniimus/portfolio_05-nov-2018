@@ -1,0 +1,137 @@
+0000.001 (0) Opened log file at time: Fri, 28 Dec 2018 18:53:02 +0000 on http://armaniimus-webdevelopment.nl/portfolio
+0000.035 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.0 WP: 4.9.9 PHP: 7.2.11 (litespeed, Linux vserver201.axc.nl 3.10.0-714.10.2.lve1.4.63.el7.x86_64 #1 SMP Sun Aug 20 17:46:23 EDT 2017 x86_64) MySQL: 10.1.23-MariaDB WPLANG: en_US Server: Apache/2 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 22.1M | 24M) multisite: N openssl: OpenSSL 1.0.2k  26 Jan 2017 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.041 (0) Free space on disk containing Updraft's temporary directory: 131122.4 MB
+0000.051 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.057 (0) Semaphore (fd, portf_options) being initialised
+0000.077 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.103 (0) Set semaphore last lock (fd) time to 2018-12-28 18:53:02
+0000.107 (0) Semaphore lock (fd) complete
+0000.125 (0) Backup run: resumption=0, nonce=c4e2ce6a0461, file_nonce=c4e2ce6a0461 begun at=1546023182 (0s ago), job type=backup
+0000.136 (0) Scheduling a resumption (1) after 300 seconds (1546023482) in case this run gets aborted
+0000.156 (0) Checking if we have a zip executable available
+0000.166 (0) Creation of backups of directories: beginning
+0000.185 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.639 (0) Total entities for the zip file: 224 directories, 1414 files (0 skipped as non-modified), 23.7 MB
+0000.664 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.686 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.708 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.729 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.759 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.764 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (18.7 MB, 1414 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0003.038 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 600 files added (on-disk size: 5392.8 KB)
+0003.074 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 700 files added (on-disk size: 5392.8 KB)
+0003.110 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 800 files added (on-disk size: 5392.8 KB)
+0003.171 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 900 files added (on-disk size: 5392.8 KB)
+0003.214 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 1000 files added (on-disk size: 5392.8 KB)
+0003.219 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.8 MB, 1414 files batched, 501 (1002) added so far); re-opening (prior size: 5392.8 KB)
+0003.879 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 1100 files added (on-disk size: 6098.6 KB)
+0003.908 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 1200 files added (on-disk size: 6098.6 KB)
+0003.945 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 1300 files added (on-disk size: 6098.6 KB)
+0003.993 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip.tmp: 1400 files added (on-disk size: 6098.6 KB)
+0004.983 (0) Created plugins zip (0) - 7073.4 KB in 4.8 s (1475.8 KB/s) (sha1: 722c25defe7f6e0b090e197fb9fc6c7456735579, sha256: e50cecb2848308def64ff225148fb70521031080d78d0eccbfe179268e14f07b)
+0005.012 (0) Beginning creation of dump of themes (split every: 400 MB)
+0005.123 (0) Total entities for the zip file: 44 directories, 249 files (0 skipped as non-modified), 10.3 MB
+0005.147 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0005.171 (0) Zip: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0006.162 (0) Created themes zip (0) - 8133.1 KB in 1.1 s (7121.4 KB/s) (sha1: 8003be71ef5456729836fe6d9a2d8ad711039c07, sha256: cdb4980a126347b5c59f9752739402d522612d3fd8af515621643a4c9cf4ec79)
+0006.174 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0006.180 (0) Looking for candidates to backup in: /home/armanjn201/domains/armaniimus-webdevelopment.nl/public_html/portfolio/wp-content/uploads
+0006.189 (0) finding files: 2018: adding to list (1)
+0006.194 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0006.224 (0) Total entities for the zip file: 3 directories, 54 files (0 skipped as non-modified), 8.7 MB
+0006.582 (0) Created uploads zip (0) - 8900.4 KB in 0.4 s (23267.7 KB/s) (sha1: 7fab79e1b666b7c570bc5b811058074866f814d0, sha256: a653a64564846756432a6f69eadee4e932092cb1916cc611834ee6d7ec3a68cb)
+0006.599 (0) Beginning backup of other directories found in the content directory (index: 0)
+0006.616 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0006.624 (0) Looking for candidates to backup in: /home/armanjn201/domains/armaniimus-webdevelopment.nl/public_html/portfolio/wp-content
+0006.629 (0) finding files: index.php: adding to list (1)
+0006.640 (0) finding files: plugins: skipping: this is the plugins directory
+0006.644 (0) finding files: themes: skipping: this is the themes directory
+0006.648 (0) finding files: uploads: skipping: this is the uploads directory
+0006.652 (0) finding files: upgrade: skipping: excluded by options
+0006.658 (0) finding files: updraft: skipping: this is the updraft directory
+0006.676 (0) Total entities for the zip file: 0 directories, 1 files (0 skipped as non-modified), 0 MB
+0006.700 (0) Created others zip (0) - 0.1 KB in 0 s (3.9 KB/s) (sha1: 963c50be2afb158328e65a0ec08047869942e260, sha256: b3aac953674f2a40278258131b087c1563be8a27a58b16db85273228cc09599c)
+0006.738 (0) Saving backup status to database (elements: 8)
+0006.753 (0) Beginning creation of database dump (WordPress DB)
+0006.792 (0) Table portf_options: Total expected rows (approximate): 173
+0006.847 (0) Table portf_options: Total rows added: 172 in 0.05 seconds
+0006.853 (0) Table portf_options: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_options.table.gz - 156.1 KB)
+0006.873 (0) Table portf_users: Total expected rows (approximate): 0
+0006.880 (0) Table portf_users: Total rows added: 1 in 0.00 seconds
+0006.884 (0) Table portf_users: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_users.table.gz - 0.6 KB)
+0006.900 (0) Table portf_usermeta: Total expected rows (approximate): 27
+0006.910 (0) Table portf_usermeta: Total rows added: 28 in 0.00 seconds
+0006.925 (0) Table portf_usermeta: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_usermeta.table.gz - 1.3 KB)
+0006.946 (0) Table portf_commentmeta: Total expected rows (approximate): 0
+0006.954 (0) Table portf_commentmeta: Total rows added: 0 in 0.00 seconds
+0006.960 (0) Table portf_commentmeta: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_commentmeta.table.gz - 0.4 KB)
+0007.002 (0) Table portf_comments: Total expected rows (approximate): 0
+0007.015 (0) Table portf_comments: Total rows added: 0 in 0.00 seconds
+0007.021 (0) Table portf_comments: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_comments.table.gz - 0.5 KB)
+0007.050 (0) Table portf_links: Total expected rows (approximate): 0
+0007.057 (0) Table portf_links: Total rows added: 0 in 0.00 seconds
+0007.064 (0) Table portf_links: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_links.table.gz - 0.4 KB)
+0007.083 (0) Table portf_postmeta: Total expected rows (approximate): 210
+0007.092 (0) Table portf_postmeta: Total rows added: 209 in 0.00 seconds
+0007.097 (0) Table portf_postmeta: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_postmeta.table.gz - 3.1 KB)
+0007.111 (0) Table portf_posts: Total expected rows (approximate): 172
+0007.136 (0) Table portf_posts: Total rows added: 181 in 0.02 seconds
+0007.143 (0) Table portf_posts: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_posts.table.gz - 12.8 KB)
+0007.171 (0) Table portf_term_relationships: Total expected rows (approximate): 58
+0007.182 (0) Table portf_term_relationships: Total rows added: 63 in 0.00 seconds
+0007.189 (0) Table portf_term_relationships: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_term_relationships.table.gz - 0.5 KB)
+0007.209 (0) Table portf_term_taxonomy: Total expected rows (approximate): 20
+0007.222 (0) Table portf_term_taxonomy: Total rows added: 21 in 0.00 seconds
+0007.230 (0) Table portf_term_taxonomy: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_term_taxonomy.table.gz - 0.6 KB)
+0007.250 (0) Table portf_termmeta: Total expected rows (approximate): 0
+0007.260 (0) Table portf_termmeta: Total rows added: 0 in 0.00 seconds
+0007.266 (0) Table portf_termmeta: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_termmeta.table.gz - 0.4 KB)
+0007.289 (0) Table portf_terms: Total expected rows (approximate): 16
+0007.294 (0) Table portf_terms: Total rows added: 21 in 0.00 seconds
+0007.299 (0) Table portf_terms: finishing file (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_terms.table.gz - 0.7 KB)
+0007.316 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_options.table.gz (1/12): adding to final database dump
+0007.368 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_users.table.gz (2/12): adding to final database dump
+0007.383 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_usermeta.table.gz (3/12): adding to final database dump
+0007.387 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_commentmeta.table.gz (4/12): adding to final database dump
+0007.391 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_comments.table.gz (5/12): adding to final database dump
+0007.398 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_links.table.gz (6/12): adding to final database dump
+0007.402 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_postmeta.table.gz (7/12): adding to final database dump
+0007.407 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_posts.table.gz (8/12): adding to final database dump
+0007.415 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_term_relationships.table.gz (9/12): adding to final database dump
+0007.423 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_term_taxonomy.table.gz (10/12): adding to final database dump
+0007.428 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_termmeta.table.gz (11/12): adding to final database dump
+0007.432 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db-table-portf_terms.table.gz (12/12): adding to final database dump
+0007.438 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db.gz: finished writing out complete database file (160 KB)
+0007.459 (0) Total database tables backed up: 12 (backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db.gz, size: 178976, sha256)
+0007.489 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0007.493 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0007.503 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0007.508 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-others.zip: others: This file has not yet been successfully uploaded: will queue
+0007.512 (0) backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db.gz: db: This file has not yet been successfully uploaded: will queue
+0007.515 (0) Saving backup history. Total backup size: 23.7 MB
+0007.539 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0007.557 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0007.561 (0) No remote despatch: user chose no remote backup service
+0007.565 (0) Recording as successfully uploaded: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-plugins.zip
+0007.601 (0) Recording as successfully uploaded: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-themes.zip
+0007.611 (0) Recording as successfully uploaded: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-uploads.zip
+0007.618 (0) Recording as successfully uploaded: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-others.zip
+0007.628 (0) Recording as successfully uploaded: backup_2018-12-28-1853_Armaniimuswebdevelopment_c4e2ce6a0461-db.gz
+0007.646 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0007.651 (0) Number of backup sets in history: 1; groups (db): 1
+0007.654 (0) Examining (for databases) backup set with group_id=0, nonce=c4e2ce6a0461, datestamp=1546023182 (Dec 28 2018 18:53:02)
+0007.660 (0) This backup set is the backup set just made, so will not be deleted.
+0007.660 (0) Number of backup sets in history: 1; groups (files): 1
+0007.664 (0) Examining (for files) backup set with nonce=c4e2ce6a0461, datestamp=1546023182 (Dec 28 2018 18:53:02)
+0007.664 (0) This backup set is the backup set just made, so will not be deleted.
+0007.667 (0) This backup set is the backup set just made, so will not be deleted.
+0007.667 (0) This backup set is the backup set just made, so will not be deleted.
+0007.667 (0) This backup set is the backup set just made, so will not be deleted.
+0007.667 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0007.670 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0007.681 (0) Resume backup (c4e2ce6a0461, 0): finish run
+0007.696 (0) Decremented the semaphore (fd) by 1
+0007.706 (0) Semaphore (fd) unlocked
+0007.713 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0007.728 (0) No email will/can be sent - the user has not configured an email address.
+0007.732 (0) The backup apparently succeeded and is now complete

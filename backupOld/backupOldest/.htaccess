@@ -1,0 +1,16 @@
+ErrorDocument 404 404.html
+
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Set my default browser security headers
+<IfModule mod_headers.c>
+    Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Xss-Protection "1; mode=block"
+    Header always set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "no-referrer-when-downgrade"
+
+    Header always edit Set-Cookie (.*) "$1; HTTPOnly"
+    # Header always edit Set-Cookie (.*) "$1; Secure"
+</IfModule>

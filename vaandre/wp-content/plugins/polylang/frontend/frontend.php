@@ -111,7 +111,7 @@ class PLL_Frontend extends PLL_Base {
 	}
 
 	/**
-	 * Modifies some query vars to "hide" that the language is a taxonomy and avoid conflicts
+	 * mMdifies some query vars to "hide" that the language is a taxonomy and avoid conflicts
 	 *
 	 * @since 1.2
 	 *

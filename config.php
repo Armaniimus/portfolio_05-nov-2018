@@ -1,8 +1,8 @@
 <?php
-Define("MAIN_SITE", "/ontwik/portfolio");
-Define("PROJECTEN_MAIN_URL", "/ontwik/projectFiles/projecten/");
+Define("MAIN_SITE", "/portfolio");
+Define("PROJECTEN_MAIN_URL", "/projectFiles/projecten/");
 
-Define("BESTAND_DIEPTE", 2);
+Define("BESTAND_DIEPTE", 1);
 
 $url = $_SERVER['REQUEST_URI'];
 $packets = explode("/", $url);

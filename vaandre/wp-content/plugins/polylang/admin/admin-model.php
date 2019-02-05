@@ -256,7 +256,6 @@ class PLL_Admin_Model extends PLL_Model {
 
 	/**
 	 * Validates data entered when creating or updating a language
-	 *
 	 * @see PLL_Admin_Model::add_language
 	 *
 	 * @since 0.4

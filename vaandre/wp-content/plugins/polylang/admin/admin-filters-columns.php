@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Adds the language column in posts and terms list tables
- * Manages quick edit and bulk edit as well
+ * adds the language column in posts and terms list tables
+ * manages quick edit and bulk edit as well
  *
  * @since 1.2
  */
@@ -10,7 +10,7 @@ class PLL_Admin_Filters_Columns {
 	public $links, $model, $filter_lang;
 
 	/**
-	 * Constructor: setups filters and actions
+	 * constructor: setups filters and actions
 	 *
 	 * @since 1.2
 	 *
@@ -21,31 +21,31 @@ class PLL_Admin_Filters_Columns {
 		$this->model = &$polylang->model;
 		$this->filter_lang = &$polylang->filter_lang;
 
-		// Add the language and translations columns in 'All Posts', 'All Pages' and 'Media library' panels
+		// add the language and translations columns in 'All Posts', 'All Pages' and 'Media library' panels
 		foreach ( $this->model->get_translated_post_types() as $type ) {
-			// Use the latest filter late as some plugins purely overwrite what's done by others :(
-			// Specific case for media
+			// use the latest filter late as some plugins purely overwrite what's done by others :(
+			// specific case for media
 			add_filter( 'manage_' . ( 'attachment' == $type ? 'upload' : 'edit-' . $type ) . '_columns', array( $this, 'add_post_column' ), 100 );
 			add_action( 'manage_' . ( 'attachment' == $type ? 'media' : $type . '_posts' ) . '_custom_column', array( $this, 'post_column' ), 10, 2 );
 		}
 
-		// Quick edit and bulk edit
+		// quick edit and bulk edit
 		add_filter( 'quick_edit_custom_box', array( $this, 'quick_edit_custom_box' ), 10, 2 );
 		add_filter( 'bulk_edit_custom_box', array( $this, 'quick_edit_custom_box' ), 10, 2 );
 
-		// Adds the language column in the 'Categories' and 'Post Tags' tables
+		// adds the language column in the 'Categories' and 'Post Tags' tables
 		foreach ( $this->model->get_translated_taxonomies() as $tax ) {
 			add_filter( 'manage_edit-' . $tax . '_columns', array( $this, 'add_term_column' ) );
 			add_filter( 'manage_' . $tax . '_custom_column', array( $this, 'term_column' ), 10, 3 );
 		}
 
-		// Ajax responses to update list table rows
+		// ajax responses to update list table rows
 		add_action( 'wp_ajax_pll_update_post_rows', array( $this, 'ajax_update_post_rows' ) );
 		add_action( 'wp_ajax_pll_update_term_rows', array( $this, 'ajax_update_term_rows' ) );
 	}
 
 	/**
-	 * Adds languages and translations columns in posts, pages, media, categories and tags tables
+	 * adds languages and translations columns in posts, pages, media, categories and tags tables
 	 *
 	 * @since 0.8.2
 	 *
@@ -60,7 +60,7 @@ class PLL_Admin_Filters_Columns {
 		}
 
 		foreach ( $this->model->get_languages_list() as $language ) {
-			// Don't add the column for the filtered language
+			// don't add the column for the filtered language
 			if ( empty( $this->filter_lang ) || $language->slug != $this->filter_lang->slug ) {
 				$columns[ 'language_' . $language->slug ] = $language->flag ? $language->flag . '<span class="screen-reader-text">' . esc_html( $language->name ) . '</span>' : esc_html( $language->slug );
 			}
@@ -70,7 +70,7 @@ class PLL_Admin_Filters_Columns {
 	}
 
 	/**
-	 * Returns the first language column in the posts, pages and media library tables
+	 * returns the first language column in the posts, pages and media library tables
 	 *
 	 * @since 0.9
 	 *
@@ -87,7 +87,7 @@ class PLL_Admin_Filters_Columns {
 	}
 
 	/**
-	 * Adds the language and translations columns ( before the comments column ) in the posts, pages and media library tables
+	 * adds the language and translations columns ( before the comments column ) in the posts, pages and media library tables
 	 *
 	 * @since 0.1
 	 *
@@ -99,7 +99,7 @@ class PLL_Admin_Filters_Columns {
 	}
 
 	/**
-	 * Fills the language and translations columns in the posts, pages and media library tables
+	 * fills the language and translations columns in the posts, pages and media library tables
 	 * take care that when doing ajax inline edit, the post may not be updated in database yet
 	 *
 	 * @since 0.1
@@ -117,17 +117,17 @@ class PLL_Admin_Filters_Columns {
 
 		$language = $this->model->get_language( substr( $column, 9 ) );
 
-		// Hidden field containing the post language for quick edit
+		// hidden field containing the post language for quick edit
 		if ( $column == $this->get_first_language_column() ) {
 			printf( '<div class="hidden" id="lang_%d">%s</div>', intval( $post_id ), esc_html( $lang->slug ) );
 		}
 
 		$post_type_object = get_post_type_object( get_post_type( $post_id ) );
 
-		// Link to edit post ( or a translation )
+		// link to edit post ( or a translation )
 		if ( $id = $this->model->post->get( $post_id, $language ) ) {
 			// get_edit_post_link returns nothing if the user cannot edit the post
-			// Thanks to Solinx. See http://wordpress.org/support/topic/feature-request-incl-code-check-for-capabilities-in-admin-screens
+			// thanks to Solinx. See http://wordpress.org/support/topic/feature-request-incl-code-check-for-capabilities-in-admin-screens
 			if ( $link = get_edit_post_link( $id ) ) {
 				if ( $id === $post_id ) {
 					$class = 'pll_icon_tick';
@@ -150,14 +150,14 @@ class PLL_Admin_Filters_Columns {
 				);
 			}
 		}
-		// Link to add a new translation
+		// link to add a new translation
 		else {
 			echo $this->links->new_post_translation_link( $post_id, $language );
 		}
 	}
 
 	/**
-	 * Quick edit & bulk edit
+	 * quick edit & bulk edit
 	 *
 	 * @since 0.9
 	 *
@@ -174,7 +174,7 @@ class PLL_Admin_Filters_Columns {
 			}
 
 			$dropdown = new PLL_Walker_Dropdown();
-			// The hidden field 'old_lang' allows to pass the old language to ajax request
+			// the hidden field 'old_lang' allows to pass the old language to ajax request
 			printf(
 				'<fieldset class="inline-edit-col-left">
 					<div class="inline-edit-col">
@@ -192,7 +192,7 @@ class PLL_Admin_Filters_Columns {
 	}
 
 	/**
-	 * Adds the language column ( before the posts column ) in the 'Categories' or 'Post Tags' table
+	 * adds the language column ( before the posts column ) in the 'Categories' or 'Post Tags' table
 	 *
 	 * @since 0.1
 	 *
@@ -204,7 +204,7 @@ class PLL_Admin_Filters_Columns {
 	}
 
 	/**
-	 * Fills the language column in the 'Categories' or 'Post Tags' table
+	 * fills the language column in the 'Categories' or 'Post Tags' table
 	 *
 	 * @since 0.1
 	 *
@@ -231,13 +231,13 @@ class PLL_Admin_Filters_Columns {
 		if ( $column == $this->get_first_language_column() ) {
 			$out = sprintf( '<div class="hidden" id="lang_%d">%s</div>', intval( $term_id ), esc_html( $lang->slug ) );
 
-			// Identify the default categories to disable the language dropdown in js
+			// identify the default categories to disable the language dropdown in js
 			if ( in_array( get_option( 'default_category' ), $this->model->term->get_translations( $term_id ) ) ) {
 				$out .= sprintf( '<div class="hidden" id="default_cat_%1$d">%1$d</div>', intval( $term_id ) );
 			}
 		}
 
-		// Link to edit term ( or a translation )
+		// link to edit term ( or a translation )
 		if ( ( $id = $this->model->term->get( $term_id, $language ) ) && $term = get_term( $id, $taxonomy ) ) {
 			if ( $link = get_edit_term_link( $id, $taxonomy, $post_type ) ) {
 				if ( $id === $term_id ) {
@@ -262,7 +262,7 @@ class PLL_Admin_Filters_Columns {
 			}
 		}
 
-		// Link to add a new translation
+		// link to add a new translation
 		else {
 			$out .= $this->links->new_term_translation_link( $term_id, $taxonomy, $post_type, $language );
 		}
@@ -271,7 +271,7 @@ class PLL_Admin_Filters_Columns {
 	}
 
 	/**
-	 * Update rows of translated posts when the language is modified in quick edit
+	 * update rows of translated posts when the language is modified in quick edit
 	 *
 	 * @since 1.7
 	 */
@@ -305,7 +305,7 @@ class PLL_Admin_Filters_Columns {
 	}
 
 	/**
-	 * Update rows of translated terms when adding / deleting a translation or when the language is modified in quick edit
+	 * update rows of translated terms when adding / deleting a translation or when the language is modified in quick edit
 	 *
 	 * @since 1.7
 	 */

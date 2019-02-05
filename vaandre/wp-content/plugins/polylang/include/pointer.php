@@ -1,20 +1,19 @@
 <?php
 
 /**
- * A class to manage WP pointers
+ * a class to manage WP pointers
  * offers the possibility to have customized buttons
  *
  * @since 1.7.7
- * @deprecated 2.3.9
  */
 class PLL_Pointer {
 	protected $args;
 
 	/**
-	 * Constructor
+	 * constructor
 	 * enqueues the pointer script
 	 *
-	 * List of parameters accepted in $args:
+	 * list of parameters accepted in $args:
 	 *
 	 * pointer  => required, unique identifier of the pointer
 	 * id       => required, the pointer will be attached to this html id
@@ -33,14 +32,12 @@ class PLL_Pointer {
 	 * @param array $args
 	 */
 	public function __construct( $args ) {
-		trigger_error( 'The class PLL_Pointer has been deprecated since Polylang 2.3.9 and will be removed in a future version.', E_USER_ERROR );
-
 		$this->args = $args;
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 
 	/**
-	 * Enqueue javascripts and styles if the pointer has not been dismissed
+	 * enqueue javascripts and styles if the pointer has not been dismissed
 	 *
 	 * @since 1.7.7
 	 */
@@ -58,20 +55,20 @@ class PLL_Pointer {
 	}
 
 	/**
-	 * Adds the javascript of our pointer to the page
+	 * adds the javascript of our pointer to the page
 	 *
 	 * @since 1.7.7
 	 */
 	public function print_js() {
 
-		// Add optional buttons
+		// add optional buttons
 		if ( ! empty( $this->args['buttons'] ) ) {
 			$b = "
 				var widget = pointer.pointer( 'widget' );
 				var buttons = $( '.wp-pointer-buttons', widget );
 				$( 'a.close', widget ).remove();"; // removes the WP button
 
-			// All the buttons use the standard WP ajax action to remember the pointer has been dismissed
+			// all the buttons use the standard WP ajax action to remember the pointer has been dismissed
 			foreach ( $this->args['buttons'] as $button ) {
 				$b .= sprintf( "
 					$( '<a>' ).addClass( '%s' ).html( '%s' ).css( 'margin-left', '10px' ).click( function() {
