@@ -1,0 +1,267 @@
+/**
+    Global header styles
+*/
+
+
+header ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+     border-bottom: 3px solid #ddd;
+     padding: 20px 30px;
+}
+
+.header-logo {
+    float:left;
+    height: 65px;
+}
+
+.header-logo-img {
+    vertical-align: middle;
+    padding-top: 10px;
+    padding-left:30px;
+}
+
+
+
+header nav ul {
+    line-height: 1;
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 1000px) {
+    .header-logo-icon {
+        display: none;
+    }
+    
+header nav {
+    float:right;
+    margin-right: 30px;
+    max-width: 1024;
+}
+    
+    /**
+        firstlayer menu
+    **/
+    
+    /* main menu item container*/
+    .first-layer-icon {
+        margin-left: 8px;
+        font-size: 16px;
+    }
+    
+    /*main menu item*/
+    header nav > ul > li {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+    }
+    
+    /*main menu item link*/
+    header nav > ul > li > a {
+        font-family: Ubuntu, Arial, Helvetica, sans-serif;
+        display: block;
+        height: 65px;
+        line-height: 65px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        cursor: pointer;
+        background-color: rgba(255,255,255,0);
+    }
+    
+    header nav ul li a:hover {
+        color: #309ef2;
+    }
+    
+    /*main menu current item*/
+    header .current_page_item > a {
+        color: #309ef2;
+        border-color: #309ef2;
+    }
+    
+    /**
+        Second layer menu with a third layer
+    **/
+    
+    /*second layer menu*/
+    header nav > ul > li > .sub-menu {
+        right: 30px;
+        display: none;
+        position: fixed;
+        z-index: 99999;
+        max-width: 1024px;
+        width: calc(95vw - 20px);
+        border: 1px solid #309ef2;
+        border-top-width: 3px;
+        border-radius: 0 0 30px 30px;
+        background-color: white;
+    }
+    
+    /*second layer menu-item*/
+    header nav > ul > li > .sub-menu > li {
+        float: left;
+        display:block;
+        padding: 29px 34px 45px 34px;
+        height: 100%;
+    }
+    
+    header nav > ul > li > .sub-menu > li:not(:first-child) {
+        border-left: 1px #dddddd solid;
+    }
+    
+    header nav > ul li:hover .sub-menu,
+    header nav > ul .sub-menu:hover {
+        display:block;
+    }
+    
+    /*second layer menu-item link*/
+    header nav > ul > li > .sub-menu > li > a,
+    header nav > ul > li > .sub-menu > li > div > a {
+        box-sizing: content-box;
+        color: black;
+        cursor: pointer;
+        font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-stretch: 100%;
+        line-height:50px;
+        text-align: center;
+        font-style: normal;
+        text-decoration: solid;
+        /*font-weight: 100;*/
+    }
+    
+    header nav > ul > li > .sub-menu > li > a:hover,
+    header nav > ul > li > .sub-menu > li > div > a:hover {
+        color: #309ef2;
+    }
+    
+    /**
+        Second layer menu without a third layer
+    **/
+    
+    /*second layer menu*/
+    
+    /*second layer menu-item*/
+    header nav > ul > li > .sub-menu > li:not(.menu-item-has-children) {
+        text-align: center;
+    }
+    
+    header nav > ul li:hover .sub-menu,
+    header nav > ul .sub-menu:hover {
+        display:block;
+    }
+    
+    /*second layer menu-item link*/
+    header nav > ul > li > .sub-menu > li:not(.menu-item-has-children) > a,
+    header nav > ul > li > .sub-menu > li:not(.menu-item-has-children) > div > a {
+        box-sizing: content-box;
+        color: black;
+        cursor: pointer;
+        font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    header nav > ul > li > .sub-menu > li:not(.menu-item-has-children) > div > a > span {
+        margin-bottom: 5px; /*something weird is going on with this style*/
+        padding-bottom: 20px; /*something weird is going on with this style*/
+        border-bottom: 1px black dotted; /*something weird is going on with this style*/
+        display: block;
+        width: 100%;
+    }
+    
+    header nav > ul > li > .sub-menu > li:not(.menu-item-has-children) > a:hover,
+    header nav > ul > li > .sub-menu > li:not(.menu-item-has-children) > div > a:hover {
+        color: #309ef2;
+    }
+    
+    /*image styles*/
+    header nav > ul > li > .sub-menu > li:not(.menu-item-has-children) > div > img {
+        padding-bottom: 15px;    
+    }
+    
+    /**
+        third layer
+    **/
+    
+    /*third layer menu-item*/
+    header nav > ul > li > .sub-menu > li > .sub-menu > li {
+        margin-top: 12px;
+    }
+    
+    /*third layer menu-item link*/
+    header nav > ul > li > .sub-menu > li > .sub-menu > li > a {
+        padding: 3px 15px 3px 5px;
+        font-size: 16px;
+        font-weight: 100;
+        font-style: normal;
+        cursor: pointer;
+        text-align: left;
+    }
+    
+    /*thirdlayer thumbnail*/
+    .thirdlayerThumbnail {
+        padding-right:15px;
+        font-size: 30px;
+        color: #309ef2;
+    }
+    
+    
+    /*special grid secondlayer nav items*/
+    /* one item */
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(1) {
+        width: 100%;
+    }
+    
+    /* two items */
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(2),
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(2) ~ li {
+        width: 50%;
+    }
+    
+    /* three items */
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(3),
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(3) ~ li {
+        width: 33.3333%;
+    }
+    
+    /* four items */
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(4),
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(4) ~ li {
+        width: 25%;
+    }
+    
+    /* five items */
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(5),
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(5) ~ li {
+        width: 20%;
+    }
+    
+    /* six items */
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(6),
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(6) ~ li {
+        width: 16.66%;
+    }
+    
+    /* seven items */
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(7),
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(7) ~ li {
+        width: 14.28%;
+    }
+    
+    /* eight items */
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(8),
+    #primary-menu > .menu-item-has-children > ul > li:first-child:nth-last-child(8) ~ li {
+        width: 12.5%;
+    }
+}

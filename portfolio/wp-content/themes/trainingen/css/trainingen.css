@@ -1,0 +1,234 @@
+.pfxn-img-container {
+	overflow: hidden;
+	position: absolute;
+}
+
+.pfxn-img-container  .img-placeholder,
+.pfxn-img-container  img {
+	height: 211px;
+	width: 358px;
+	margin-top:-10px;
+	
+}
+
+.pfxn-article-wrapper {
+	padding: 15px;
+}
+
+.pfxn-card-wrapper {
+	border: solid grey 1px;
+	border-radius: 5px;
+	height: 250px;
+	
+}
+
+.pfxn-search-form {
+	clear: both;
+	width: 50%;
+	margin: 0px 25% 50px 25%;
+}
+
+.pfxn-search-form form {
+	display: block;
+	width: 100%;
+}
+
+.pfxn-search-form .searchform input {
+	width: calc(100% - 60px) !important;
+	float: left;
+	box-sizing: border-box !important;
+}
+
+.pfxn-search-form .searchform .btn-search {
+	width: 60px !important;
+	border-width: 2px;
+	padding-left: 28px;
+	padding-right: 28px;
+	float:right;
+}
+
+.pfxn-train-button {
+	margin-left: auto;
+	margin-right: auto;
+	max-width:  150px;
+	display:block;
+}
+
+.pfxn-train-button button {
+	margin: 0;
+}
+
+.pfxn-excerpt-wrapper {
+	margin-top: 20px;
+	height: 120px;
+}
+
+.pfxn-spacer-15 {
+	height: 15px;
+	width: 100%;
+}
+
+.pfxn-spacer-30 {
+	height: 30px;
+	width: 100%;
+}
+
+.pfxn-spacer-60 {
+	height: 60px;
+	width: 100%;
+}
+
+.trainingBtn {
+	margin-bottom: 5px;
+	margin-top:5px;
+}
+
+.trainer-overlay {
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1000;
+	background-color: rgba(100,100,100, 0.5);
+}
+
+.trainer-block {
+	cursor: default;
+	position: absolute;
+	top: 10vh;
+	left:10vw;
+	right: 10vw;
+	background-color: white;
+	border-radius: 5px;
+	width: 80vw;
+	min-width: 500px;
+	min-height:60vh;
+	max-height: 75vh;
+	z-index: 1001;
+	margin: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.trainer-closeBtn {
+	z-index: 1005;
+	position: absolute;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	background-color:red;
+	color: white;
+	top:0;
+	right: 0;
+	margin-top: -4px;
+	margin-right: -4px;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 1px 1px black;
+}
+
+.trainerContainer {
+	padding: 30px;
+	position: relative;
+	height: 100%;
+	max-height: 75vh;
+}
+
+.trainer-card-wrapper {
+	position: relative;
+	padding: 15px;
+	height: 270px;
+	transform-style: preserve-3d;
+	transition: all 0.5s ease;
+}
+
+.trainer-card-wrapper-rotate {
+	transform: rotateY(180deg);
+}
+
+.trainer-card-wrapper-rotate > .trainCard-front {
+	width: 0px;	
+	height: 0px;
+	font-size: 1px;
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+	border-width: 0px;
+}
+/* .trainer-card-wrapper:hover {
+	transform: rotateY(180deg);
+} */
+
+.trainCard {
+	position: absolute;
+	height: calc(100% - 30px);
+	width: calc(100% - 30px);
+	overflow: hidden;
+	border: solid grey 1px;
+	border-radius: 5px;
+	backface-visibility: hidden;
+	background-color: white;
+}
+
+.trainCard p {
+	text-align: center;
+}
+
+.trainCard p a {
+	padding: 5px;
+} 
+
+.trainCard-back {
+	transform: rotateY(180deg);
+}
+
+.trainCard-back div {
+	margin-top: 30px;
+/* 	margin-top: calc(50% - 30px); */
+/* 	transform: translateY(-100%); */
+}
+
+.trainCardBtn {
+	position: relative;
+	width: 100%;
+	border-radius: 5px;
+	bottom: -5px;
+}
+
+.trainCardImg {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	height: 150px;
+	position: absolute;
+	display: block;
+	max-width: none;
+	width: auto;
+}
+
+.trainCardImgContainer {
+	position: relative;
+	height: 150px;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.display-none {
+	display: none;
+}
+
+.trainer-special {
+	margin-left: auto;
+	margin-right: auto;
+}
+.post .post-content .title a{
+	color: white!important;
+
+}
+.post .post-content .title a:hover{
+	color: #ff0def!important;
+}
